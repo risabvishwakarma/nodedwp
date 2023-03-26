@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark" >
+  <a class="navbar-brand" href="/">
+   <img src="{{data.brandIcon}}"  width="30" height="30" style="border-radius: 50%" class="d-inline-block align-top">
+  {{data.brandName}} </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        {{#each data.links}}
+      <li class="nav-item active">
+        <a class="nav-link" href="{{this.url}}">{{this.label}} <span class="sr-only">(current)</span></a>
+      </li>
+        {{/each}}
+    </ul>
+  </div>
+</nav>
+
