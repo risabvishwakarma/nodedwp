@@ -1,0 +1,39 @@
+
+
+
+ <script>
+   myfunction(){
+        $("#id").click(function(e)
+        {
+            var MyForm = JSON.stringify($("#id").serializeJSON());
+            console.log(MyForm);
+            $.ajax({
+                url : "http://localhost:7777/ola-drive/customer/ride",
+                type: "get",
+                data : MyForm,
+
+            });
+            e.preventDefault(); //STOP default action
+
+        });
+    };
+    </script>
+
+<div class="side">
+     {{#each data}}
+    <div class="card">
+  <img src="/static/images/pic.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>{{this.productName}}</h1>
+  <p class="price">{{this.productPrice}}</p>
+  <p>Some text about the jeans..</p>
+  <form action="/addtocart" method="get">
+  <p>
+  <button class="btn mt-3" name="id" value="{{this.id}}">Add TO Cart</button></p>
+  </form>
+</div>
+ {{/each}}
+
+</div>
+
+
+  

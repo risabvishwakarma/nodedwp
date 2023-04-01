@@ -5,8 +5,8 @@ const bodyParser = require('body-parser')
 const ax=require('axios')
 
 const server=express();
-// const urlcloude="mongodb+srv://risabvishwakarma:m76EMRWHA3ZlNaAm@cluster0.6bq38zd.mongodb.net/DynemicWebDB"
-const urlcloude='mongodb+srv://risabvishwakarma:m76EMRWHA3ZlNaAm@cluster0.6bq38zd.mongodb.net/FinalProject'
+const urlcloude="mongodb+srv://risabvishwakarma:m76EMRWHA3ZlNaAm@cluster0.6bq38zd.mongodb.net/DynemicWebDB"
+// const urlcloude='mongodb+srv://risabvishwakarma:m76EMRWHA3ZlNaAm@cluster0.6bq38zd.mongodb.net/FinalProject'
 const PORT=process.env.PORT|8087
 mongoos.connect(urlcloude)
 const db_connection=mongoos.connection
