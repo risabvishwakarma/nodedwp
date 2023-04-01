@@ -57,6 +57,14 @@ router.get("/remedies",async(req,res)=>{
     res.end()
 
 });
+router.get("/remedies/:index",async(req,res)=>{
+        const name=req.params.index
+    const remedie=await Remedies.findOne({"index":name})
+    //console.log(remedie)
+    res.send(remedie)
+    res.end()
+
+});
 
 
 
