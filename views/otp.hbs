@@ -23,10 +23,10 @@
         <div class="text-center mt-4 name">
             Unitral
         </div>
-        <form class="p-3 mt-3" action="/otp" >
+        <form class="p-3 mt-3" action="/otp" method="post" >
             <div class="form-field d-flex align-items-center" >
                 <span class="far fa-user"></span>
-                <input type="number" id="otp" name="otp" placeholder="OTP" maxlength="4">
+                <input type="tel" maxlength="4" id="otp" name="otp" placeholder="OTP" >
             </div>
             <button class="btn mt-3" name="gmail" value="{{id}}">Validate</button>
 
